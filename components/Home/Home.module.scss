@@ -1,0 +1,32 @@
+.container {
+  max-width: 1210px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+
+  .converterContainer {
+    margin-top: 50px;
+  }
+
+  .checkWalletDetails {
+    text-align: center;
+    margin-top: 20px;
+
+    button {
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "segoe ui", Roboto,
+        Helvetica, Arial, sans-serif;
+      font-size: 15px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

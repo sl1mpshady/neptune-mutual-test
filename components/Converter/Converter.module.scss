@@ -1,0 +1,93 @@
+$borderColor: #222531;
+
+.container {
+  position: relative;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid $borderColor;
+  width: 100%;
+  max-width: 400px;
+
+  .token {
+    box-sizing: border-box;
+    margin: 0px;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: row;
+    padding: 20px 24px;
+    background-color: rgb(23, 25, 36);
+    -webkit-box-align: center;
+    align-items: center;
+
+    &:nth-child(2) {
+      border-top: 1px solid $borderColor;
+    }
+
+    .coinDetails {
+      margin-left: 12px;
+      .symbol {
+        line-height: 1.5;
+        margin: 0px;
+        color: rgb(207, 214, 228);
+        font-size: 11px;
+      }
+      .name {
+        line-height: 1.5;
+        margin: 0px;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    .input {
+      box-sizing: border-box;
+      margin: 0px;
+      display: flex;
+      flex: 1 1 0%;
+      flex-direction: row;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: end;
+      justify-content: flex-end;
+      color: rgb(255, 255, 255);
+
+      input {
+        padding: 10px 0px;
+        background: transparent;
+        caret-color: rgb(97, 136, 255);
+        border: none;
+        font-size: 18px;
+        text-align: right;
+        appearance: none;
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        font-family: Inter, sans-serif;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+      }
+    }
+  }
+  .swap > span {
+    cursor: pointer;
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
