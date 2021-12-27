@@ -11,9 +11,7 @@ const WalletDetails = () => {
   const { setCheckWallet, balance, setBalance } =
     useContext(WalletDetailsContext);
 
-  const onClose = () => {
-    setCheckWallet(false);
-  };
+  const onClose = () => setCheckWallet(false);
 
   async function connect() {
     try {
@@ -39,7 +37,7 @@ const WalletDetails = () => {
   useEffect(() => {
     if (active)
       (async () => {
-        const tempBalance = await getBalance(account);
+        const tempBalance: string = await getBalance(account!);
         setBalance(tempBalance);
       })();
   }, [active, account, setBalance]);

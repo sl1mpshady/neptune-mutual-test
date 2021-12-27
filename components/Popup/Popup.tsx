@@ -8,7 +8,7 @@ const Popup = ({
   children,
 }: {
   title: string;
-  onClose: () => {};
+  onClose: () => void;
   children: React.ReactNode;
 }) => {
   return createPortal(
